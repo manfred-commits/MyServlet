@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>MyServlet</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+  <!-- Blocco di Registrazione -->
+  <!-- 1. Registra la servlet -->
+  <servlet>
+  	<!-- Indica il nome della Servlet -->
+  	<servlet-name>MyServlet</servlet-name>
+  	<!-- Indica a quale classe Java corrisponde il suddetto nome -->
+  	<servlet-class>com.manfredipiraino.myservlet.MyServlet</servlet-class>
+  </servlet>
+  
+  <!-- 2. Abbina la Servlet a un URL web -->
+  <servlet-mapping>
+  <!-- Indica il nome della Servlet -->
+  	<servlet-name>MyServlet</servlet-name>
+  	<!-- Indica l'url web grazie al quale raggiungere compilare ed esguire) la Servlet -->
+  	<url-pattern>/myservlet</url-pattern>
+  </servlet-mapping>
+  <!-- /Blocco di Registrazione -->
+  
+  <servlet>
+  	<servlet-name>MyHttpServlet</servlet-name>
+  	<servlet-class>com.manfredipiraino.myservlet.MyHttpServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MyHttpServlet</servlet-name>
+  	<url-pattern>/myhttpservlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>MySum</servlet-name>
+  	<servlet-class>com.manfredipiraino.myservlet.MySum</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MySum</servlet-name>
+  	<url-pattern>/mysum</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>MyImage</servlet-name>
+  	<servlet-class>com.manfredipiraino.myservlet.MyImage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MyImage</servlet-name>
+  	<url-pattern>/myimage</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
+<!-- Chiusura del contenitore web-app (nodo ROOT) -->
